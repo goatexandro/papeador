@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Agents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="agents.js" defer></script> 
+
+</head>
+<body class="bg-black text-white" style="font-family: 'VALORANT', sans-serif;">
+
+    <header id="header" class="bg-black text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <div class="container mx-auto flex justify-between items-center px-4 lg:justify-center relative">
+                <a href="index.html" class="px-4 py-2 text-white hover:text-blue-500">
+                    <img src="v.png" alt="Valorant Logo" class="w-10">
+                </a>
+                <div id="toggleMode" class="cursor-pointer absolute right-4 text-xl">
+                    <i id="sunIcon" class="fas fa-sun text-yellow-400"></i>
+                    <i id="moonIcon" class="fas fa-moon text-blue-500 hidden"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-6">
+        <div id="container" class="grid grid-cols-2 gap-4">
+        </div>
+    </main>
+
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden z-50">
+        <div class="bg-transparent p-6 max-w-3xl w-full">
+            <div class="flex items-center space-x-4 rounded-lg">
+                <img id="modalImage" class="w-32 h-32 object-cover rounded-full" alt="Agent Image">
+
+                <div class="text-black">
+                    <button id="closeButton" class="absolute top-2 right-2 text-white px-4 py-2 hover:text-blue-500 text-xl">
+                        <label style="font-family: 'VALORANT', sans-serif;">Atras</label>
+                    </button>
+                    <p id="agentDescription" class="text-white text-lg mt-4"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="themes.js"></script> 
+</body>
+</html>
